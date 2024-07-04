@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { SportModule } from './sport/sport.module';
@@ -18,7 +16,5 @@ import { SportEntity } from './sport/entities/sport.entity';
     }),
     SportModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
