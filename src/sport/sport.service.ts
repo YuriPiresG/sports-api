@@ -53,9 +53,9 @@ export class SportService {
     return result;
   }
 
-  update(id: number, updateSportDto: UpdateSportDto) {
-    const result = this.sportRepository.update(id, updateSportDto);
-    if (!result) {
+  async update(id: number, updateSportDto: UpdateSportDto) {
+    const result = await this.sportRepository.update(id, updateSportDto);
+    if (result.affected === 0) {
       throw new NotFoundException('Atividade esportiva não encontrada!');
     }
     return result;
