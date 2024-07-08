@@ -3,5 +3,4 @@ export class CreateSportDto {
   description: string;
   type: string;
   rules?: string;
-  equipment?: string[];
 }

@@ -16,7 +16,4 @@ export class SportEntity {
 
   @Column({ nullable: true })
   rules?: string;
-
-  @Column('simple-array', { nullable: true })
-  equipment?: string[];
 }

@@ -6,5 +6,4 @@ export class UpdateSportDto extends PartialType(CreateSportDto) {
   description: string;
   type: string;
   rules?: string;
-  equipment?: string[];
 }
